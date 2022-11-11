@@ -1,0 +1,19 @@
+{
+  "name": "nodets-template",
+  "version": "1.0.0",
+  "description": "Node typescript base template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiki-kanri/nodets-template.git"
+  },
+  "author": "kiki-kanri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kiki-kanri/nodets-template/issues"
+  },
+  "homepage": "https://github.com/kiki-kanri/nodets-template#readme"
+}
