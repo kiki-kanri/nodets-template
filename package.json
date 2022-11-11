@@ -4,6 +4,7 @@
   "description": "Node typescript base template.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/kiki-kanri/nodets-template/issues"
   },
-  "homepage": "https://github.com/kiki-kanri/nodets-template#readme"
+  "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
 }
