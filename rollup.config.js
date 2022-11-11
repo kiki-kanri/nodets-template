@@ -1,6 +1,7 @@
 import { defineConfig } from 'rollup';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
+import externals from 'rollup-plugin-node-externals';
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import strip from '@rollup/plugin-strip';
@@ -15,11 +16,13 @@ export default defineConfig({
 	input: srcPath,
 	output: {
 		dir: distPath,
-		name: 'index.js'
+		name: 'index.js',
+		format: 'cjs'
 	},
 	plugins: [
 		babel(),
 		commonjs(),
+		externals(),
 		resolve(),
 		strip({
 			include: ['**/*.ts']
