@@ -4,6 +4,7 @@
   "description": "Node typescript base template.",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
     "dev": "nodemon ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +19,18 @@
   },
   "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-strip": "^3.0.1",
+    "@rollup/plugin-terser": "^0.1.0",
+    "@rollup/plugin-typescript": "^9.0.2",
     "nodemon": "^2.0.20",
+    "rollup": "^3.2.5",
     "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
     "typescript": "^4.8.4"
   }
 }
