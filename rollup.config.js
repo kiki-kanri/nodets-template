@@ -20,7 +20,9 @@ export default defineConfig({
 		format: 'cjs'
 	},
 	plugins: [
-		babel(),
+		babel({
+			babelHelpers: 'bundled'
+		}),
 		commonjs(),
 		externals(),
 		resolve(),
