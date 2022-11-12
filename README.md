@@ -1,3 +1,3 @@
 # nodets-template
 
-## Default build tool is rollup.
+## This branch use webpack to build.
