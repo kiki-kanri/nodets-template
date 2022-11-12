@@ -1,5 +1,4 @@
 import { defineConfig } from 'rollup';
-import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import externals from 'rollup-plugin-node-externals';
 import path from 'path';
@@ -20,9 +19,6 @@ export default defineConfig({
 		format: 'cjs'
 	},
 	plugins: [
-		babel({
-			babelHelpers: 'bundled'
-		}),
 		commonjs(),
 		externals(),
 		resolve(),
