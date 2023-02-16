@@ -9,13 +9,13 @@ RUN apk upgrade
 RUN rm -rf /var/cache/apk/*
 RUN npm i npm@latest -g
 
-COPY ["./*.js", "./*.json", "./*.sh", ".babelrc", "./"]
+COPY ["./*.js", "./*.json", "./*.sh", "./"]
 RUN npm i
 COPY ["./src", "./src"]
 RUN npm run build
 RUN npm prune --omit=dev
 RUN rm -rf ./src
-RUN chmod +x ./run.sh
 RUN npm cache clean --force
 
-ENTRYPOINT ["/app/run.sh"]
+RUN chmod +x entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
