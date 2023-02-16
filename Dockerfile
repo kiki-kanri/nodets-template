@@ -17,5 +17,5 @@ RUN npm prune --omit=dev
 RUN rm -rf ./src
 RUN npm cache clean --force
 
-RUN chmod +x entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]
