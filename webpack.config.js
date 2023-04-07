@@ -1,9 +1,9 @@
 const KaiguangPlugin = require('kaiguang-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 const srcPath = path.resolve(__dirname, 'src');
 const distPath = path.resolve(__dirname, 'dist');
@@ -20,7 +20,7 @@ module.exports = {
 				exclude: /node_modules/,
 				include: [srcPath],
 				loader: 'ts-loader',
-				test: /\.ts$/,
+				test: /\.ts$/
 			}
 		]
 	},
