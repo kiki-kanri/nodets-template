@@ -1,3 +1,3 @@
 (async () => {
-	if (require.main === module) console.log('Hello world!');
+	console.log('Hello world!');
 })();
