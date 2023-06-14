@@ -7,9 +7,8 @@ import path from 'path';
 import { defineConfig } from 'rollup';
 import externals from 'rollup-plugin-node-externals';
 
-const srcPath = path.resolve(__dirname, 'src', 'index.ts');
 const distPath = path.resolve(__dirname, 'dist');
-const production = !process.env.ROLLUP_WATCH;
+const srcPath = path.resolve(__dirname, 'src', 'index.ts');
 
 export default defineConfig({
 	input: srcPath,
@@ -25,7 +24,7 @@ export default defineConfig({
 		strip({
 			include: ['**/*.ts']
 		}),
-		production && terser({
+		terser({
 			module: true
 		}),
 		typescript({
