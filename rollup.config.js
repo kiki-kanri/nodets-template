@@ -6,10 +6,12 @@ import typescript from '@rollup/plugin-typescript';
 import path from 'path';
 import { defineConfig } from 'rollup';
 import externals from 'rollup-plugin-node-externals';
+import { fileURLToPath } from 'url';
 
-const srcPath = path.resolve(__dirname, 'src', 'index.ts');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const distPath = path.resolve(__dirname, 'dist');
-const production = !process.env.ROLLUP_WATCH;
+const srcPath = path.resolve(__dirname, 'src', 'index.ts');
 
 export default defineConfig({
 	input: srcPath,
@@ -25,7 +27,7 @@ export default defineConfig({
 		strip({
 			include: ['**/*.ts']
 		}),
-		production && terser({
+		terser({
 			module: true
 		}),
 		typescript({
