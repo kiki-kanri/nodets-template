@@ -1,8 +1,4 @@
 {
-  "name": "nodets-template",
-  "version": "1.0.0",
-  "description": "Node typescript base template.",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
@@ -19,7 +15,7 @@
   },
   "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.1",
+    "@rollup/plugin-commonjs": "^25.0.2",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-strip": "^3.0.2",
     "@rollup/plugin-terser": "^0.4.3",
