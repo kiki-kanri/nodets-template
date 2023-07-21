@@ -1,11 +1,11 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import strip from '@rollup/plugin-strip';
-import terser from '@rollup/plugin-terser';
-import typescript from '@rollup/plugin-typescript';
 import path from 'path';
 import { defineConfig } from 'rollup';
+import esbuild from 'rollup-plugin-esbuild';
 import externals from 'rollup-plugin-node-externals';
+import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,16 +22,13 @@ export default defineConfig({
 	},
 	plugins: [
 		commonjs(),
+		esbuild({
+			minify: true,
+			target: 'esnext'
+		}),
 		externals(),
-		resolve(),
-		strip({
-			include: ['**/*.ts']
-		}),
-		terser({
-			module: true
-		}),
-		typescript({
-			module: 'esnext'
-		})
+		resolve({ extensions: ['.js', '.json', '.mjs', '.node', '.ts'] }),
+		strip({ include: ['**/*.ts'] }),
+		typescriptPaths({ preserveExtensions: true })
 	]
 });
