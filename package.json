@@ -15,11 +15,11 @@
   },
   "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-strip": "^3.0.2",
     "nodemon": "^3.0.1",
-    "rollup": "^3.26.2",
+    "rollup": "^3.26.3",
     "rollup-plugin-node-externals": "^6.1.1",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
