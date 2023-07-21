@@ -20,17 +20,16 @@
   "devDependencies": {
     "@types/progress-bar-webpack-plugin": "^2.1.2",
     "@types/webpack-node-externals": "^3.0.0",
-    "kaiguang-webpack-plugin": "^1.0.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "terser-webpack-plugin": "^5.3.9",
-    "ts-loader": "^9.4.3",
+    "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
-    "tsconfig-paths-webpack-plugin": "^4.0.1",
-    "typescript": "^5.0.4",
-    "webpack": "^5.83.1",
-    "webpack-cli": "^5.1.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
   }
 }

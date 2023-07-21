@@ -1,12 +1,11 @@
-const KaiguangPlugin = require('kaiguang-webpack-plugin');
 const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-const srcPath = path.resolve(__dirname, 'src');
 const distPath = path.resolve(__dirname, 'dist');
+const srcPath = path.resolve(__dirname, 'src');
 
 module.exports = {
 	entry: './src/index.ts',
@@ -26,7 +25,7 @@ module.exports = {
 	},
 	node: {
 		__filename: true,
-		__dirname: true,
+		__dirname: true
 	},
 	optimization: {
 		minimize: true,
@@ -38,7 +37,6 @@ module.exports = {
 		publicPath: 'dist'
 	},
 	plugins: [
-		new KaiguangPlugin(),
 		new ProgressBarPlugin()
 	],
 	resolve: {
