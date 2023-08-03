@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "dev": "nodemon --exec 'node --loader nodets-esm-loader' ./src/index.ts"
+    "dev": "nodemon --exec 'node --loader @esbuild-kit/esm-loader' ./src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -15,11 +15,11 @@
   },
   "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
   "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.5.5",
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-strip": "^3.0.2",
     "nodemon": "^3.0.1",
-    "nodets-esm-loader": "^1.0.1",
     "rollup": "^3.27.1",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-node-externals": "^6.1.1",
