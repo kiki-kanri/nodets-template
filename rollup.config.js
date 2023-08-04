@@ -18,7 +18,7 @@ export default defineConfig({
 	output: {
 		dir: distPath,
 		name: 'index.js',
-		format: 'cjs'
+		format: 'es'
 	},
 	plugins: [
 		commonjs(),
