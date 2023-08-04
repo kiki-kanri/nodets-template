@@ -14,6 +14,9 @@ const distPath = path.resolve(__dirname, 'dist');
 const srcPath = path.resolve(__dirname, 'src', 'index.ts');
 
 export default defineConfig({
+	// Use this setting to set the package as an external package, such as fs-extra, lodash...etc.
+	// Docs: https://rollupjs.org/configuration-options/#external
+	external: [],
 	input: srcPath,
 	output: {
 		dir: distPath,
