@@ -1,22 +1,10 @@
 {
-  "name": "nodets-template",
-  "version": "1.0.0",
-  "description": "Node typescript base template.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only ./src/index.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kiki-kanri/nodets-template.git"
-  },
-  "author": "kiki-kanri",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kiki-kanri/nodets-template/issues"
-  },
-  "homepage": "https://github.com/kiki-kanri/nodets-template#readme",
   "devDependencies": {
     "@types/progress-bar-webpack-plugin": "^2.1.2",
     "@types/webpack-node-externals": "^3.0.0",
