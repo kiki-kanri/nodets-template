@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "dev": "nodemon --exec 'node --loader @esbuild-kit/esm-loader' ./src/index.ts"
+    "dev": "nodemon --exec \"node --loader @esbuild-kit/esm-loader\" ./src/index.ts"
   },
   "license": "MIT",
   "devDependencies": {
