@@ -1,3 +1,3 @@
 # nodets-template
 
-## Default build tool is rollup (cjs).
+## Default build tool is rollup (esm).
