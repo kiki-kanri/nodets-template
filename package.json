@@ -1,6 +1,5 @@
 {
   "license": "MIT",
-  "main": "index.js",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only ./src/index.ts"
