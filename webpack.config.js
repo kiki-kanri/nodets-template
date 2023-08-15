@@ -4,8 +4,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-const distPath = path.resolve(__dirname, 'dist');
-const srcPath = path.resolve(__dirname, 'src');
+const distPath = path.join(__dirname, 'dist');
+const srcPath = path.join(__dirname, 'src');
 
 module.exports = {
 	entry: './src/index.ts',

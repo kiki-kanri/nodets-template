@@ -5,6 +5,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only ./src/index.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.5.0",
     "@types/progress-bar-webpack-plugin": "^2.1.2",
     "@types/webpack-node-externals": "^3.0.0",
     "progress-bar-webpack-plugin": "^2.1.0",

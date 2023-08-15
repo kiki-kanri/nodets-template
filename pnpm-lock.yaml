@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@types/node':
+    specifier: ^20.5.0
+    version: 20.5.0
   '@types/progress-bar-webpack-plugin':
     specifier: ^2.1.2
     version: 2.1.2
