@@ -23,11 +23,8 @@ export default defineConfig({
 	},
 	plugins: [
 		// Must remove debugger statements before other packages.
-		strip({ include: ['./src/**/*'] }),
-		esbuild({
-			minify: true,
-			sourceMap: false
-		}),
+		strip({ include: ['./src/**/*.ts'] }),
+		esbuild({ minify: true }),
 		externals(),
 		typescriptPaths({ preserveExtensions: true })
 	]
