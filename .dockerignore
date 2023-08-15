@@ -1,4 +1,26 @@
+# Cache
 .cache
-dist
-docker-build.sh
+
+# Dependency directory
 node_modules
+
+# Dist
+dist
+
+# Git
+.git
+
+# Logs
+logs
+*.log
+
+# Other files
+Dockerfile
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Scripts
+docker-build.sh
