@@ -6,8 +6,6 @@
     "dev": "nodemon -r tsconfig-paths/register --transpile-only ./src/index.ts"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.4",
-    "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-strip": "^3.0.2",
     "@types/node": "^20.5.0",
     "nodemon": "^3.0.1",
