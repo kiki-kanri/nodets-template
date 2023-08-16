@@ -22,7 +22,7 @@ export default defineConfig({
 		format: 'es'
 	},
 	plugins: [
-		// Must remove debugger statements before other packages.
+		// Must remove debugger statements before other plugins.
 		strip({ include: ['./src/**/*.ts'] }),
 		esbuild({ minify: true }),
 		externals(),
