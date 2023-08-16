@@ -1,3 +1,3 @@
 # nodets-template
 
-## This branch use webpack to build.
+## This branch use webpack (cjs) to build.
