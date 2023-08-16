@@ -20,7 +20,7 @@ export default defineConfig({
 		format: 'cjs'
 	},
 	plugins: [
-		// Must remove debugger statements before other packages.
+		// Must remove debugger statements before other plugins.
 		strip({ include: ['./src/**/*.ts'] }),
 		esbuild({ minify: true }),
 		externals(),
