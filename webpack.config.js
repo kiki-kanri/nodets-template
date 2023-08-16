@@ -1,6 +1,6 @@
+const { EsbuildPlugin } = require('esbuild-loader');
 const path = require('path');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
@@ -18,7 +18,11 @@ module.exports = {
 			{
 				exclude: /node_modules/,
 				include: [srcPath],
-				loader: 'ts-loader',
+				loader: 'esbuild-loader',
+				options: {
+					minify: true,
+					target: 'esnext'
+				},
 				test: /\.ts$/
 			}
 		]
@@ -29,7 +33,7 @@ module.exports = {
 	},
 	optimization: {
 		minimize: true,
-		minimizer: [new TerserPlugin()]
+		minimizer: [new EsbuildPlugin({ target: 'esnext' })]
 	},
 	output: {
 		filename: 'index.js',
@@ -40,13 +44,8 @@ module.exports = {
 		new ProgressBarPlugin()
 	],
 	resolve: {
-		extensions: [
-			'.js',
-			'.ts'
-		],
-		plugins: [
-			new TsconfigPathsPlugin()
-		]
+		extensions: ['.ts'],
+		plugins: [new TsconfigPathsPlugin()]
 	},
 	target: 'node'
 }
