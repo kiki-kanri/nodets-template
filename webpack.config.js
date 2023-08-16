@@ -19,10 +19,7 @@ module.exports = {
 				exclude: /node_modules/,
 				include: [srcPath],
 				loader: 'esbuild-loader',
-				options: {
-					minify: true,
-					target: 'esnext'
-				},
+				options: { target: 'esnext' },
 				test: /\.ts$/
 			}
 		]
