@@ -1,13 +1,12 @@
 import strip from '@rollup/plugin-strip';
 import path from 'path';
 import { defineConfig } from 'rollup';
-import esbuild from 'rollup-plugin-esbuild';
+import { minify } from 'rollup-plugin-esbuild';
 import externals from 'rollup-plugin-node-externals';
-import tsConfigPaths from 'rollup-plugin-tsconfig-paths';
+import ts from 'rollup-plugin-ts';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distPath = path.join(__dirname, 'dist');
 const inputPath = path.join(__dirname, 'src', 'index.ts');
 
@@ -20,10 +19,10 @@ export default defineConfig({
 		format: 'es'
 	},
 	plugins: [
-		// Remove the debugger statement plugin must be loaded before the rest of the plugin with transform method.
+		// Typescript plugin must be loaded before the rest of the plugin with transform method.
+		ts(),
 		strip({ include: ['./src/**/*.ts'] }),
-		tsConfigPaths(),
-		esbuild({ minify: true }),
+		minify(),
 		externals()
 	]
 });
