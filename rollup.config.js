@@ -19,10 +19,10 @@ export default defineConfig({
 		format: 'es'
 	},
 	plugins: [
-		// Typescript plugin must be loaded before the rest of the plugin with transform method.
+		externals(),
+		// Typescript plugin must be loaded before the strip plugin.
 		ts(),
 		strip({ include: ['./src/**/*.ts'] }),
-		minify(),
-		externals()
+		minify()
 	]
 });
