@@ -5,7 +5,7 @@
     "dev": "nodemon -r tsconfig-paths/register --transpile-only ./src/index.ts"
   },
   "devDependencies": {
-    "@types/node": "^20.5.3",
+    "@types/node": "^20.5.6",
     "@types/progress-bar-webpack-plugin": "^2.1.2",
     "@types/webpack-node-externals": "^3.0.0",
     "esbuild-loader": "^4.0.1",
@@ -14,7 +14,7 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
