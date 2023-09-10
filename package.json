@@ -8,12 +8,12 @@
   "devDependencies": {
     "@esbuild-kit/esm-loader": "^2.5.5",
     "@rollup/plugin-strip": "^3.0.2",
-    "@types/node": "^20.5.9",
+    "@types/node": "^20.6.0",
     "nodemon": "^3.0.1",
     "rollup": "^3.29.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-node-externals": "^6.1.1",
-    "rollup-plugin-ts": "^3.4.4",
+    "rollup-plugin-ts": "^3.4.5",
     "typescript": "^5.2.2"
   }
 }
