@@ -6,12 +6,12 @@
     "dev": "nodemon --exec \"node --loader @esbuild-kit/esm-loader\" ./src/index.ts"
   },
   "devDependencies": {
-    "@esbuild-kit/esm-loader": "^2.5.5",
+    "@esbuild-kit/esm-loader": "^2.6.5",
     "@rollup/plugin-strip": "^3.0.2",
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.8.0",
     "nodemon": "^3.0.1",
-    "rollup": "^3.29.0",
-    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup": "^3.29.4",
+    "rollup-plugin-esbuild": "^6.0.2",
     "rollup-plugin-node-externals": "^6.1.1",
     "rollup-plugin-ts": "^3.4.5",
     "typescript": "^5.2.2"
